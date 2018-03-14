@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.viktordluhos.my_senso_teleop_gui">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/sensodrive_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+
+        android:theme="@style/AppTheme">
+        <activity android:name=".Welcome_screen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Menu" />
+        <activity android:name=".Introduction" />
+        <activity android:name=".Joint_control" />
+        <activity android:name=".Linear_control" />
+        <activity android:name=".Teach_mode" />
+        <activity android:name=".Virtual_cube" />
+        <activity android:name=".Sensodrive_info" />
+        <activity android:name=".Exit_app" />
+        <activity android:name=".Connect_to_ROS" />
+        <activity android:name=".Mode_and_test" />
+        <activity android:name=".Vibrotac_test"></activity>
+    </application>
+
+</manifest>
