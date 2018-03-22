@@ -3,13 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.viktordluhos.my_senso_teleop_gui">
 
-    <application
+    <!-- Pridane ROS -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application xmlns:tools="http://schemas.android.com/tools"
         android:allowBackup="true"
         android:icon="@drawable/sensodrive_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
         <activity android:name=".Welcome_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +22,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--<service android:name="org.ros.android.NodeMainExecutorService">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="org.ros.android.NodeMainExecutorService" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+
         <activity android:name=".Menu" />
         <activity android:name=".Introduction" />
         <activity android:name=".Joint_control" />
@@ -27,7 +39,9 @@
         <activity android:name=".Exit_app" />
         <activity android:name=".Connect_to_ROS" />
         <activity android:name=".Mode_and_test" />
-        <activity android:name=".Vibrotac_test"></activity>
+        <activity android:name=".Vibrotac_test" />
+        <!--<activity android:name="org.ros.android.MasterChooser" />-->
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
